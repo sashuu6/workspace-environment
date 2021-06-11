@@ -7,6 +7,10 @@
 # Github Repository: https://github.com/sashuu6/workspace-environment
 ####################################
 
-echo "----------------------------"
-echo "Sashwat's Macbook Pro (2018)"
-echo "----------------------------"
+echo "================================"
+echo "1. Setting up Sashwat's Shell..."
+echo "--------------------------------"
+echo "Fetching system specification..."
+neofetch
+echo "--------------------------------"
+echo "Fetching Network information..."
