@@ -1,3 +1,12 @@
+"###########################################"
+"sashuu6's .vimrc file"
+"Created on: 08/05/2021 07:15:00"
+"Modified on: 11/06/2021 21:45:00"
+"Revision no: 4"
+"Tested Machine: Apple Macbook Pro 15 (2018)"
+"GitHub Repository: Github Repository: https://github.com/sashuu6/workspace-environment"
+"###########################################"
+
 "set no autoindent"
 set noautoindent
 
@@ -33,6 +42,3 @@ set incsearch
 
 "Disable swap"
 set noswapfile
-
-"Enable spell check"
-set spell
