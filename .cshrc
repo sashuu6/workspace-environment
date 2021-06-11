@@ -7,7 +7,6 @@
 # Github Repository: https://github.com/sashuu6/workspace-environment
 ####################################
 
-
 if ($?prompt) then
 	# Notify job completion
 	set notify
@@ -19,8 +18,14 @@ if ($?prompt) then
 	set prompt="(%l) (%h) [%D/%W/%Y %T] (%n@%m) %~ > "
 endif
 
+# Set autoexpand on tab
+set autoexpand
+
 # Set default permission
 umask 022
 
 # Default editor
 setenv EDITOR /usr/bin/vim
+
+# set ll support
+alias ll 'ls -lG'
