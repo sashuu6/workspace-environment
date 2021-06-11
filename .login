@@ -8,9 +8,12 @@
 ####################################
 
 echo "================================"
-echo "1. Setting up Sashwat's Shell..."
+echo "Setting up Sashwat's Shell..."
 echo "--------------------------------"
 echo "Fetching system specification..."
 neofetch
 echo "--------------------------------"
 echo "Fetching Network information..."
+$network_reader
+echo "Initialisation complete..."
+echo "================================"

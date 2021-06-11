@@ -40,7 +40,10 @@ set rmstar
 umask 022
 
 # set ll support
-alias ll 'ls -lG'
+alias ll "ls -lG"
 
-# Default editor
+# set default editor
 setenv EDITOR "vim -u ${HOME}/.vimrc"
+
+# set network_monitor.py
+setenv network_reader "python3 .network_monitor"
