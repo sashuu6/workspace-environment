@@ -27,3 +27,12 @@ set title
 
 "confirmation for usaved files"
 set confirm
+
+"Sets partial searches"
+set incsearch
+
+"Disable swap"
+set noswapfile
+
+"Enable spell check"
+set spell
