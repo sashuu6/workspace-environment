@@ -46,4 +46,4 @@ alias ll "ls -lG"
 setenv EDITOR "vim -u ${HOME}/.vimrc"
 
 # set network_monitor.py
-setenv network_reader "python3 .network_monitor"
+setenv network_reader "python3 ~/.network_monitor"
