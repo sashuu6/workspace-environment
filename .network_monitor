@@ -2,7 +2,7 @@
 Script Name: network_monitor.py
 Purpose: TO check if network and related projects are up
 Created on: 11/06/2021 22:30:00
-Modified on: 11/06/2021 22:30:00
+Modified on: 09/05/2022 22:30:00
 Revision: 1
 GitHub Repository : https://github.com/sashuu6/workspace-environment
 """
@@ -11,7 +11,7 @@ import urllib.request
 import socket
 
 
-def __check_site_up(host):
+def __check_site_up(host) -> bool:
     """ Definition to check url is up
 
     host: hostname/URL of site
@@ -23,7 +23,7 @@ def __check_site_up(host):
         return False
 
 
-def main():
+def main() -> None:
     """ Definition main
     """
     # check internet
@@ -37,13 +37,15 @@ def main():
     print("\nNetwork Information:-")
 
     # Fetch local IP
-    local_ip_address = socket.gethostbyname(socket.gethostname())
+    local_ip_connection = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    local_ip_connection.connect(("8.8.8.8", 80))
+    local_ip_address = local_ip_connection.getsockname()[0]
     print(f"Local IP: \t {local_ip_address}")
 
     # Fetch Global IP if internet available
     if internet_access:
         global_ip_address = urllib.request.urlopen(
-            "http://ip.42.pl/raw").read().decode("utf-8")
+            "https://api.ipify.org").read().decode("utf-8")
         print(f"Global IP: \t {global_ip_address}")
 
 

@@ -9,7 +9,7 @@
 
 if ($?prompt) then
 	# Command line prompt customisation
-	set prompt="(%l) (%h) [%D/%W/%Y %T] (%n@%m) %~ > "
+	set prompt="(%n@%m) %~ \n[%D/%W/%Y %T] (%l) (%h) -> "
 endif
 
 # history
@@ -46,4 +46,4 @@ alias ll "ls -lG"
 setenv EDITOR "vim -u ${HOME}/.vimrc"
 
 # set network_monitor.py
-setenv network_reader "python3 .network_monitor"
+setenv network_reader "python3 ${HOME}/.network_monitor"

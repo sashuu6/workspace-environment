@@ -15,5 +15,6 @@ neofetch
 echo "--------------------------------"
 echo "Fetching Network information..."
 $network_reader
+echo " "
 echo "Initialisation complete..."
 echo "================================"
