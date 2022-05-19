@@ -10,6 +10,8 @@ Run the following installer and restart your terminal.
 
 `$ ./installer.sh`
 
+![Installer](installer.png)
+
 ## Screenshots
 
 ### Terminal
