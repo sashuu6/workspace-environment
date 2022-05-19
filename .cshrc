@@ -1,15 +1,26 @@
 #####################################
 # sashuu6's .cshrc file
 # Created on: 08/05/2021 07:15:00
+# Modified on: 19/05/2022 22:55:00
 # Revision no: 4
 # Machine: Apple Macbook Pro 15 (2018)
 # Github Repository: https://github.com/sashuu6/workspace-environment
 ####################################
 
+# Colors!
+set     red="%{\033[1;31m%}"
+set   green="%{\033[0;32m%}"
+set  yellow="%{\033[1;33m%}"
+set    blue="%{\033[1;34m%}"
+set magenta="%{\033[1;35m%}"
+set    cyan="%{\033[1;36m%}"
+set   white="%{\033[0;37m%}"
+set     end="%{\033[0m%}"
+
 # Load prompt information
 if ($?prompt) then
 	# Command line prompt customisation
-	set prompt="(%n@%m) %~ \n[%D/%W/%Y %T] (%l) (%h) -> "
+	set prompt="${white}(${blue}%n@%m${white}) ${green}%~ \n${cyan}[%D/%W/%Y %T] ${yellow}(%l) ${magenta}(%h) ${red}-> ${end} "
 endif
 
 # Set os, osver and arch
@@ -50,7 +61,9 @@ endsw
 # Load Aliases file
 setenv USER_ALIASES_FILE $HOME/.aliases
 if (-e $USER_ALIASES_FILE) then
+	echo "Loaded user Alias file: $USER_ALIASES_FILE"
 	source $USER_ALIASES_FILE
+	echo ""
 else
 	echo "No alises file to source"
 endif
@@ -89,3 +102,6 @@ set rmstar
 
 # Set default permission
 umask 022
+
+# Unset colours
+unset red green yellow blue magenta cyan yellow white end

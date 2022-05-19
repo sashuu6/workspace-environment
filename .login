@@ -7,7 +7,6 @@
 # Github Repository: https://github.com/sashuu6/workspace-environment
 ####################################
 
-
 # Exit if os is unknown
 if (! $?os) then
     echo ".login: Operating system is unknown\! Exiting..."
@@ -27,8 +26,13 @@ if ($?TERM) then
 if (-e $HOME/.editor) then
     setenv EDITOR `cat $HOME/.editor`
 else
-    setenv EDITOR `vim -u ${HOME}/.vimrc`
+    setenv EDITOR vim
 endif
 
 echo ""
+echo "Available Aliases:-"
+foreach ali (`cat $USER_ALIASES_FILE | awk '{print $2}'`)
+which $ali
+end
+
 echo ""
