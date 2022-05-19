@@ -23,6 +23,9 @@ if ($?prompt) then
 	set prompt="${white}(${blue}%n@%m${white}) ${green}%~ \n${cyan}[%D/%W/%Y %T] ${yellow}(%l) ${magenta}(%h) ${red}-> ${end} "
 endif
 
+# Unset colours
+unset red green yellow blue magenta cyan yellow white end
+
 # Set os, osver and arch
 if (-e /bin/uname) then
     set os = `/bin/uname -s`
@@ -102,6 +105,3 @@ set rmstar
 
 # Set default permission
 umask 022
-
-# Unset colours
-unset red green yellow blue magenta cyan yellow white end
