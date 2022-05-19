@@ -1,7 +1,6 @@
 #####################################
 # sashuu6's .cshrc file
 # Created on: 08/05/2021 07:15:00
-# Last modified: 11/06/2021 21:45:00
 # Revision no: 4
 # Machine: Apple Macbook Pro 15 (2018)
 # Github Repository: https://github.com/sashuu6/workspace-environment
@@ -90,6 +89,3 @@ set rmstar
 
 # Set default permission
 umask 022
-
-# set default editor
-setenv EDITOR "vim -u ${HOME}/.vimrc"
