@@ -6,8 +6,9 @@
 
 ## Instructions
 
-1. Symlink or copy the files to $HOME/
-2. Restart the terminal
+Run the following installer and restart your terminal.
+
+`$ ./installer.sh`
 
 ## Screenshots
 
