@@ -7,14 +7,28 @@
 # Github Repository: https://github.com/sashuu6/workspace-environment
 ####################################
 
-echo "================================"
-echo "Setting up Sashwat's Shell..."
-echo "--------------------------------"
-echo "Fetching system specification..."
-neofetch
-echo "--------------------------------"
-echo "Fetching Network information..."
-$network_reader
-echo " "
-echo "Initialisation complete..."
-echo "================================"
+
+# Exit if os is unknown
+if (! $?os) then
+    echo ".login: Operating system is unknown\! Exiting..."
+    exit 1
+endif
+
+# Greetings
+echo ""
+echo -n "Today is "; date
+echo "Operating System is $os $osver"
+
+echo "Default path = ($path)"
+
+if ($?TERM) then
+    echo 'Terminal type is "'$TERM'"'
+
+if (-e $HOME/.editor) then
+    setenv EDITOR `cat $HOME/.editor`
+else
+    setenv EDITOR vim
+endif
+
+echo ""
+echo ""
