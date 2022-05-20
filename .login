@@ -15,13 +15,14 @@ endif
 
 # Greetings
 echo ""
-echo -n "Today is "; date
-echo "Operating System is $os $osver"
-
-echo "Default path = ($path)"
-
+echo -n "Date and Time (Today):"; date
+echo ""
+echo "Operating System (OS): $os $osver"
+echo ""
+echo "Default Path: ($path)"
+echo ""
 if ($?TERM) then
-    echo 'Terminal type is "'$TERM'"'
+    echo 'Terminal Type: "'$TERM'"'
 
 if (-e $HOME/.editor) then
     setenv EDITOR `cat $HOME/.editor`

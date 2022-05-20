@@ -62,22 +62,22 @@ case default:
 endsw
 
 # Load Aliases file
+echo ""
 setenv USER_ALIASES_FILE $HOME/.aliases
 if (-e $USER_ALIASES_FILE) then
-	echo "Loaded user Alias file: $USER_ALIASES_FILE"
+	echo "User aliases file: Loaded $USER_ALIASES_FILE"
 	source $USER_ALIASES_FILE
 	echo ""
 else
-	echo "No alises file to source"
+	echo "No aliases file to source"
 endif
 if ($arch =~ *86) then
-	echo "Machine architecture is $arch (32-bit)"
+	echo "Machine architecture: $arch (32-bit)"
 else if ($arch =~ *64) then
-	echo "Machine architecture is $arch (64-bit)"
+	echo "Machine architecture: $arch (64-bit)"
 else
-	echo "Machine architecture is $arch"
+	echo "Machine architecture: $arch"
 endif
-echo ""
 
 # history
 set histdup=prev
