@@ -2,3 +2,4 @@ alias ll "ls -lG" # set ll support
 alias gitp "cd ~/Development/git-projects;ll" # cd into git project folder and perform ll
 alias recsh "source ~/.cshrc" # source .cshrc file
 alias relogg "source ~/.login" # source .login file
+alias ltr "ls -latr" # Show ls with long, hidden files, list as per update time, reverse mode
