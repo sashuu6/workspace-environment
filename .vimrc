@@ -20,7 +20,7 @@ filetype plugin on
 filetype indent on
 
 "Turn syntax highlighting on"
-syntax on
+syntax enable
 
 "Add numbers to each line on the left-hand side"
 set number
@@ -83,3 +83,71 @@ set wildmode=list:longest
 "There are certain files that we would never want to edit with Vim"
 "Wildmenu will ignore files with these extensions"
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+"Set to auto read when a file is changed from the outside
+set autoread
+au FocusGained,BufEnter * checktime
+
+":W sudo saves the file
+"(useful for handling the permission-denied error)
+command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+"Always show current position
+set ruler
+
+"Height of the command bar
+set cmdheight=1
+
+"Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+"How many tenths of a second to blink when matching brackets
+set mat=2
+
+"No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+"Properly diable sound on errors on MacVim
+if has("gui_macvim")
+    autocmd GUIEnter * set vb t_vb=
+endif
+
+"Add a bit extra margin to the left
+set foldcolumn=1
+
+"Enable 256 colours palette in GNOME Terminal
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+
+try
+    colorscheme desert
+catch
+endtry
+
+set background=dark
+highlight Normal ctermfg=grey ctermbg=black
+"Set extra options when running in GUI mode
+if has("gui_running")
+    set guioptions-=t
+    set guioptions-=e
+    set t_Co=256
+    set guitablabel=%M\ %t
+endif
+
+"Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+"Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+set guifont=Monospace\ 8
+
+"Always show the status line
+set laststatus=2
+
+"Format the status line
+set statusline=\ %F%m%r%h\ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
