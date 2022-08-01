@@ -30,9 +30,9 @@ then
     mv ~/.editor $backup_folder
 fi
 
-if [[ -e ~/.login ]]
+if [[ -e ~/.zlogin ]]
 then
-    mv ~/.login $backup_folder
+    mv ~/.zlogin $backup_folder
 fi
 
 if [[ -e ~/.vimrc ]]
@@ -45,7 +45,7 @@ echo ""
 
 echo "Copying new files..."
 echo ""
-cp $script_path/.aliases $script_path/.zshrc $script_path/.editor $script_path/.login $script_path/.vimrc ~/
+cp $script_path/.aliases $script_path/.zshrc $script_path/.editor $script_path/.zlogin $script_path/.vimrc ~/
 
 echo "Copying complete.."
 echo ""
